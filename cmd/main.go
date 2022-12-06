@@ -1,9 +1,8 @@
 package main
 
 import (
-	"debug"
-	"fmt"
 	"runtime/debug"
+	"fmt"
 
 	"github.com/ydm/goinject"
 	"github.com/ydm/goinject/dashes-again"
@@ -20,5 +19,7 @@ func main() {
 	fmt.Printf("package_with_dashes.inner.Version=%s\n", blabla.Version)
 	fmt.Printf("package_with_dashes.Hello()=%s\n", package_with_dashes.Hello())
 	// debug.ReadBuildInfo()
-	debug.ReadBuildInfo()
+	info, ok := debug.ReadBuildInfo()
+	fmt.Printf("buildInfo=%v ok=%t\n", info, ok)
+	fmt.Printf("Main.Version=%s\n", info.Main.Version)
 }
