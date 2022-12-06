@@ -12,6 +12,7 @@ import (
 )
 
 func main() {
+	fmt.Println("701 branch:")
 	fmt.Printf("goinject.Version=%s\n", goinject.Version)
 	fmt.Printf("nope.Version=%s\n", nope.Version)
 	fmt.Printf("something_completely_different.Version=%s\n", something_completely_different.Version)
